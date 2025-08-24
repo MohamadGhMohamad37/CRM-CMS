@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Mail\VerifyEmailCode;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
@@ -41,10 +42,7 @@ class RegiesterController extends Controller
         ]);
 
         // Send the code via Mailtrap
-        Mail::raw("Your verification code is: $verificationCode", function ($message) use ($user) {
-            $message->to($user->email)
-                    ->subject('Verify your email');
-        });
+        Mail::to($user->email)->send(new VerifyEmailCode($user->name, $verificationCode));
 
         return redirect()->route('verify.form')->with('email', $user->email);
     }

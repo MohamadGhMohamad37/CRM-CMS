@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class RegiesterController extends Controller
 {
-    //
+    public function index(){
+        return view('auth.regiester');
+    }
 }

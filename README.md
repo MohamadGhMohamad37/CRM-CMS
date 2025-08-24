@@ -11,9 +11,9 @@
   <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About RM Project
+## About CRM Project
 
-**RM** is a comprehensive web application built using **Laravel 10**, **MySQL**, and front-end technologies including **HTML, CSS, JavaScript, and Bootstrap**.  
+**CRM** is a comprehensive web application built using **Laravel 10**, **MySQL**, and front-end technologies including **HTML, CSS, JavaScript, and Bootstrap**.  
 This project is designed to function as a **CRM (Customer Relationship Management)** system with an integrated **CMS** and productivity tools to manage users, products, content, and daily operations efficiently.
 
 ---
